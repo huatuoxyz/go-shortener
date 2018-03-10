@@ -1,6 +1,6 @@
 # go-shortener
 
-Simple Bitly, Google Shortener API client for Go.
+Simple Bitly, Google URL Shortener API client for Go.
 
 ### Usage
 ```go
