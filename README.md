@@ -19,19 +19,22 @@ func main() {
 
 	// bitly
 	b := shortener.NewBitly("{ACCESS_TOKEN}")
-
 	shortURL, err := b.Short("http://hoge.com")
 	fmt.Println(shortURL) // http://bit.ly/2DahJMA
-
 	longURL, err := b.Long(shortURL)
 	fmt.Println(longURL) // http://hoge.com/
 
 	// goo.gl
 	g := shortener.NewGoogl("{GOOGLE_API_KEY}")
-
 	shortURL, err = g.Short("http://hoge.com")
 	fmt.Println(shortURL) // https://goo.gl/hQMZ6
+	longURL, err = g.Long(shortURL)
+	fmt.Println(longURL) // http://hoge.com/
 
+	// clacky.org
+	c := shortener.NewClacky("{ACCESS_TOKEN}")
+	shortURL, err = c.Short("http://hoge.com")
+	fmt.Println(shortURL) // https://clacky.org/HuOe
 	longURL, err = g.Long(shortURL)
 	fmt.Println(longURL) // http://hoge.com/
 }
