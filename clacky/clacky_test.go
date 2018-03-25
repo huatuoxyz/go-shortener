@@ -10,7 +10,7 @@ func TestClacky(t *testing.T) {
 	if err != nil {
 		t.Errorf("clacky short error: %v", err)
 	}
-	expected := "clacky.org/JM0e"
+	expected := "https://clacky.org/JM0e"
 	if longURL != expected {
 		t.Errorf("got %v\nwant %v", longURL, expected)
 	}
