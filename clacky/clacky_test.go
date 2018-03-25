@@ -5,7 +5,7 @@ import (
 )
 
 func TestClacky(t *testing.T) {
-	c := New("f35f52a230350827fc6335388b078c5102cc0776-1")
+	c := New("f35f52a230350827fc6335388b078c5102cc0776")
 	longURL, err := c.Short("https://google.com")
 	if err != nil {
 		t.Errorf("clacky short error: %v", err)
